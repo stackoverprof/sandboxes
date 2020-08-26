@@ -1,23 +1,33 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import Badge from '../components/comps2/Badge'
+import DarkModeBtn from '../components/DarkModeBtn1'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>SandBoxes</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          SandBoxes <a href="https://nextjs.org">by ERRBINT</a>
+          SandBoxes <a href="http://errbint.net">by ERRBINT</a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div className="explorer">
+          <p className={styles.description}>
+            Explore all the Components &nbsp;
+          </p>
+          <Link href="/comps">
+            <a>
+              <Badge kind="palegray" text="/comps"/>
+            </a>
+          </Link>
+        </div>
+
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
@@ -60,6 +70,17 @@ export default function Home() {
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
+
+    <style>{`
+      .explorer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    
+    `}
+    </style>
+
     </div>
   )
 }
