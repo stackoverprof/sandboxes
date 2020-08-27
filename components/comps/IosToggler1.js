@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 
-const IosToggler1 = ({name}) => {
-    const [isActive, setisActive] = useState("");
-    const [isOn, setisOn] = useState("");
-    const [isChecked, setisChecked] = useState(false);
+const IosToggler1 = ({name, defaulted}) => {
+    if (typeof defaulted == 'undefined') defaulted = false;
+    
+    const [isActive, setisActive] = useState(defaulted ? "active" : "");
+    const [isOn, setisOn] = useState(defaulted ? "on" : "");
+    const [isChecked, setisChecked] = useState(defaulted ? true : false);
 
     function switcher() {
         if (isActive == "") {

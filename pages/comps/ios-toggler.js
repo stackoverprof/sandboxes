@@ -1,11 +1,11 @@
 import React from 'react'
-import IosToggler from '../../components/IosToggler1'
+import IosToggler from '../../components/comps/IosToggler1'
 
 const index = () => {
     return (
         <div>
             <form action="" method="post" className="pen">
-                <IosToggler name="subscribtionletter"/>
+                <IosToggler defaulted={true} name="subscribtionletter"/>
                 <IosToggler name="readagreement"/>
             </form>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import DarkModeBtn from '../../components/DarkModeBtn1'
+import DarkModeBtn from '../../components/comps/DarkModeBtn1'
 
 const index = () => {
     return (

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Badge from '../components/comps2/Badge'
-import DarkModeBtn from '../components/DarkModeBtn1'
+import DarkModeBtn from '../components/comps/DarkModeBtn1'
 
 export default function Home() {
   return (
@@ -66,8 +66,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+          by&nbsp;<strong> ERRBINT </strong>&nbsp;with ❤
         </a>
       </footer>
 
