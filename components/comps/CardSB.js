@@ -5,7 +5,7 @@ const CardSB = () => {
     return (
         <Wrapper>
             <div className="preview">
-                <div className="previewin">
+                <div className="preview-in">
                     <img src="" alt=""/>
                 </div>
             </div>
@@ -37,7 +37,7 @@ const Wrapper = Styled.div`
         justify-content: center;
         align-items: center;
     }
-    .previewin{
+    .preview-in{
         margin-left: 16px;
         border-radius: 12px;
         width: 140px;

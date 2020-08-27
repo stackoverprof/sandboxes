@@ -3,8 +3,27 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import Badge from '../components/comps2/Badge'
 import DarkModeBtn from '../components/comps/DarkModeBtn1'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
+  const [explorerText, setexplorerText] = useState("Explore all at");
+  const [explorerTop, setexplorerTop] = useState("0");
+
+  useEffect(() => {
+    function setScreenState(isBig){
+      setexplorerText( isBig ? "Explore all the Components" : "Explore all at");
+      setexplorerTop( isBig ? "0" : "32px");
+    }
+    
+    let isBigWidth = window.innerWidth > 500;
+    setScreenState(isBigWidth);
+    
+    window.addEventListener("resize", () => {
+      isBigWidth = window.innerWidth > 500;
+      setScreenState(isBigWidth);
+    });
+  });
+
   return (
     <div className={styles.container}>
       <Head>
@@ -19,7 +38,7 @@ export default function Home() {
 
         <div className="explorer">
           <p className={styles.description}>
-            Explore all the Components &nbsp;
+            {explorerText} &nbsp;
           </p>
           <Link href="/comps">
             <a>
@@ -75,6 +94,7 @@ export default function Home() {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: ${explorerTop};
       }
     
     `}
