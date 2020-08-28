@@ -36,7 +36,7 @@
 }
 
 .title a {
-  color: #b700ff;
+  color: #9900ff;
   text-decoration: none;
 }
 
@@ -48,8 +48,12 @@
 
 .title {
   margin: 0;
+  /* color: #fadfff;   */
   line-height: 1.15;
   font-size: 4rem;
+  font-weight: 800;
+  /* text-shadow: 2px 2px 0px #a807e7, 4px 4px 0px #bc8bcf, 5px 5px 14px black, 6px 6px 0px #dcc2e5, 8px 8px 0px #7c01ad;
+     */
 }
 
 .title,
@@ -98,8 +102,8 @@
 .card:hover,
 .card:focus,
 .card:active {
-  color: #b700ff;
-  border-color: #b700ff;
+  color: #9900ff;
+  border-color: #9900ff;
 }
 
 .card h3 {

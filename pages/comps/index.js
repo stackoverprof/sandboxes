@@ -7,24 +7,14 @@ const Index = () => {
         <Wrapper>
             <h1>Explore Components</h1>
             <div className="etalase">
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
+                <Card title="Dark Mode Skew" description="Button with nice sliding icon" urlimg="/compgif/darkskew.gif" tag="Button" page="/comps/dark-mode-btn1"/>
+                <Card title="iOS Toggler" description="Checkbox in a cool way and gradient-able" urlimg="/compgif/iostoggler.gif" tag="Button" page="/comps/ios-toggler"/>
+                <Card tag="soon" page="/comps"/>
+                <Card tag="soon" page="/comps"/>
+                <Card tag="soon" page="/comps"/>
+                <Card tag="soon" page="/comps"/>
+                <Card tag="soon" page="/comps"/>
+                <Card tag="soon" page="/comps"/>
             </div>
         </Wrapper>
     );

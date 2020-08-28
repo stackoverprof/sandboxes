@@ -12,7 +12,7 @@ const Badge = ({kind, text}) => {
                 .gotocomps{
                     background-color: #eeeeee;
                     color: #444444;
-                    font-weight: 600;
+                    font-weight: 700;
                     display: flex;
                     justify-content: center;
                     align-items: center;
