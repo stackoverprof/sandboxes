@@ -7,6 +7,7 @@ const Hamburger = () => {
     const [opac, setOpac] = useState(0)
     const [delayer, setDelayer] = useState("0")
     const [delayer2, setDelayer2] = useState("0.6s")
+    const [hideFirst, setHideFirst] = useState("-1")
 
     function doAction() {
         if (action == "" || action == "active back") {
@@ -15,12 +16,14 @@ const Hamburger = () => {
             setAction("active")
             setDelayer("0.6s");
             setDelayer2("0");
+            setHideFirst("100");
         } else {
             setSetAside("")
             setOpac(0)
             setAction("active back")
             setDelayer("0");
             setDelayer2("0.2s");
+            setHideFirst("-1");
         }
         
     }
@@ -42,6 +45,7 @@ const Hamburger = () => {
                     filter: opacity(${opac});
                     transition: 1s;
                     transition-delay: ${delayer};
+                    z-index: ${hideFirst};
                 }
             `}</style>
 
@@ -50,6 +54,7 @@ const Hamburger = () => {
 }
     
 const Wrapper = Styled.div`
+    z-index:101;
     transform: scale(0.5);
     width: 60px;
     height: 60px;
