@@ -13,8 +13,8 @@ const CardSB = ({title, description, urlimg, tag, page}) => {
                     </div>
                     <div className="content">
                         <h3>{title}</h3>
-                        <p>{description}</p>
-                        <Tag text={tag}/>
+                        <p className="p-desc">{description}</p>
+                        <Tag text={tag} color="white" bgcolor="#9900ff"/>
                     </div>
                 </Wrapper>
             </a>
@@ -71,6 +71,9 @@ const Wrapper = Styled.div`
         height: 140px;  
         background-size: cover;
     }
+    p-desc{
+        color: gray;
+    }
     .content{
         padding: 28px 16px;
         padding-bottom: 24px;
@@ -84,7 +87,6 @@ const Wrapper = Styled.div`
         p{
             margin: 0;
             margin-bottom: 6px;
-            color: gray;
             font-size: 16px;
         }
     }

@@ -31,6 +31,7 @@ flex-direction: column;
 
 h1{
     margin: 50px;
+    margin-top: 80px;
     text-align: center;
 }
 .etalase{

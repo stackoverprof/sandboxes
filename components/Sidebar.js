@@ -13,6 +13,7 @@ const Wrapper = Styled.div`
     height: 100%;
     width: 400px;
     border: none;
+    background-color: #fefefe;
     box-shadow: 0 0 8px rgba(0,0,0,0.20);
     
     display: flex;

@@ -30,9 +30,9 @@ const Hamburger = () => {
 
     return (
         <Wrapper onClick={() => doAction()}>
-            <div class={`menu ${action}`}>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div className={`menu ${action}`}>
+                <span className="bar"></span>
+                <span className="bar"></span>
             </div>
 
             <style>{`
