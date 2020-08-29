@@ -1,5 +1,5 @@
 # sandboxes
- All my codepen pieces is here
+ SandBoxes by ERRBINT, a website with a bunch of ready-to-use React Components i've made. Aesthetic, Simple, and Satisfying Components all are free for you to take to your project. Go Explore it at sandboxes-er.vercel.app
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
