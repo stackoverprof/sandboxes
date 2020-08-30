@@ -1,9 +1,11 @@
 import React from 'react'
 import Styled from '@emotion/styled'
 import Tag from '../components/comps2/Badge2'
+import NoSSR from 'react-no-ssr'
     
 const PodFloat = ({title, desc, tag, item}) => {
     return (
+        <NoSSR>
         <Wrapper>
             <h1>{title}</h1>
             <hr/>
@@ -21,6 +23,7 @@ const PodFloat = ({title, desc, tag, item}) => {
                 </div>
             </div>
         </Wrapper>
+        </NoSSR>
     );
 }
     
