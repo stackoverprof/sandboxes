@@ -2,7 +2,7 @@ import React from 'react'
 import Styled from '@emotion/styled'
 import PreviewLayout from '../../components/layouts/PreviewLayout'
 import Hamburger from '../../components/comps/Hamburger1'
-    
+
 const Hamburger1 = () => {
     return (
         <Wrapper>
