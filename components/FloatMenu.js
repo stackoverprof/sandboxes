@@ -2,9 +2,9 @@ import React from 'react'
 import Styled from '@emotion/styled'
 import Link from 'next/link'
     
-const FloatMenu = () => {
+const FloatMenu = ({animaWidth}) => {
     return (
-        <Wrapper>
+        <Wrapper animaWidth={animaWidth}>
             <h4>MENU</h4>
             <div className="search"></div>
             <div className="iconic">
@@ -36,21 +36,24 @@ const FloatMenu = () => {
     );
 }
     
-const Wrapper = Styled.div`
-padding-top: 40px;
+const Wrapper = Styled.div(({animaWidth})=>`
+padding-top: 18px;
+
+overflow-y: hidden;
 
 display: flex;
 justify-content: space-between;
 align-items: center;
 flex-direction: column;
 
-height: 276px;
-width: 190px;
-background-size: contain;
-background-position: center;
-background-repeat: no-repeat;
+height: ${animaWidth};
+width: 174px;
 
-background-image: url('/img/menurect.svg');
+background: #F3F6F9;
+box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+
+transition: 1s;
 
 h4{
     font-family: Lato;
@@ -67,7 +70,7 @@ h4{
 .search{
     width: 152px;
     height: 42px;
-    margin-top: 14px;
+    margin-top: 16px;
     margin-bottom: 4px;
 
     background: #FFFFFF;
@@ -125,9 +128,9 @@ button{
     text-align: center;
 
     color: #FFFFFF;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
     
-`
+`)
     
 export default FloatMenu

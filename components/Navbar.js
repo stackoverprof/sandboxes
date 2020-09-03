@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Styled from '@emotion/styled'
 import Link from 'next/link'
 import FloatMenu from '../components/FloatMenu'
+import OutsideClickHandler from 'react-outside-click-handler'
     
 const Navbar = () => {
     const [activated, setactivated] = useState(1)
@@ -13,6 +14,7 @@ const Navbar = () => {
     const [allp, setAllp] = useState("black")
     const [openmenu, setopenmenu] = useState(true)
     const [openmenu2, setopenmenu2] = useState(true)
+    const [animaWidth, setanimaWidth] = useState("10px");
 
     function switcher() {
         if (sun == "day") {
@@ -32,14 +34,18 @@ const Navbar = () => {
 
     function opener(status) {
         if (status) {
-            setopenmenu2(status);
+            setanimaWidth("10px");
             setTimeout(() => {
-                setopenmenu(status);
-            }, 200);
+                setopenmenu2(status);
+                setTimeout(() => {
+                    setopenmenu(status);
+                }, 200);
+            }, 100);
         } else {
             setopenmenu(status);
             setTimeout(() => {
                 setopenmenu2(status);
+                setanimaWidth("244px");
             }, 200);
             
         }
@@ -74,7 +80,16 @@ const Navbar = () => {
                 <div className="profile"></div>
             </div>
             <div className="floatmenu">
-                <FloatMenu/>
+                <OutsideClickHandler
+                    onOutsideClick={() => {
+                        if(openmenu == false) opener(true);
+                    }}
+                    >
+                    <div className="floatmenuinside">
+                        <img src="/img/menu/pointup.svg" alt=""/>
+                        <FloatMenu animaWidth={animaWidth}/>
+                    </div>
+                </OutsideClickHandler>
             </div>
 
             <style>{`
@@ -123,9 +138,21 @@ const Wrapper = Styled.div(({sun, mover, boxShadow, backg, allp, openmenu, openm
         top: 0;
         right: 0;
         transition: 0.2s;
+        padding: 24px 8px 0 8px;
                 
         margin: 14px;
-        margin-top: 84px;
+        margin-top: 60px;
+        display: flex;
+    }
+    .floatmenuinside{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        img{
+            z-index:11;
+        }
     }
 
     .btn-menu{
@@ -178,7 +205,7 @@ const Wrapper = Styled.div(({sun, mover, boxShadow, backg, allp, openmenu, openm
 
     .rightnav{
         transition: 1s;
-        width: 173px;
+        width: 174px;
         height: 64px;
 
         background: #F3F6F9;
